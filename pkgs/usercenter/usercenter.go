@@ -15,6 +15,9 @@ type JsonRPCUser struct {
 	Time int64  `json:"time"`
 	Sex  string `json:"sex"`
 }
+type Users struct {
+	User []JsonRPCUser
+}
 
 func (u JsonRPCUser) String() string {
 	return fmt.Sprintf(
@@ -26,10 +29,11 @@ func (u JsonRPCUser) String() string {
 func GetUserCenterInfo() {
 	userC := &dubbogo.DubboClient{
 		ServiceName: "com.ikurento.user.UserProvider",
-		Method:      "GetUser",
-		Args:        []string{"A003"},
+		Method:      "GetUserInfo",
+		Args:        []string{"A003", "A001"},
 	}
-	uInfo := new(JsonRPCUser)
+
+	uInfo := new(Users)
 	err := userC.Prepare().ClientFunc(uInfo)
 	if err != nil {
 		panic(err)

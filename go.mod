@@ -17,6 +17,7 @@ require (
 	github.com/mattn/go-isatty v0.0.6 // indirect
 	github.com/name5566/leaf v0.0.0-20181103040206-1364c176dfbd // indirect
 	github.com/samuel/go-zookeeper v0.0.0-20180130194729-c4fab1ac1bec // indirect
+	github.com/smartystreets/goconvey v0.0.0-20190306220146-200a235640ff // indirect
 	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce // indirect
 	gopkg.in/yaml.v2 v2.2.2
 )
